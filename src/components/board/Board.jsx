@@ -7,20 +7,25 @@ export default class Board extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nodes: []
+            nodes: [],
+            size: {row: 30, col: 52}
         };
+        this.guess = {
+          block: []
+        }
     }
+
     
     componentDidMount(){
         const nodes = [];
-        for(let row = 0; row < 30; row++){
+        for(let row = 0; row < this.state.size.row; row++){
             const currentRow = [];
-            for(let col = 0; col < 50; col++){
+            for(let col = 0; col < this.state.size.col; col++){
                 const currentNode = {
                     col, 
                     row,
-                    isStart: row === 10 && col === 5,
-                    isFinish: row === 10 && col === 35
+                    x: row === 0 && col === 0,
+                    o: row === 0 && col === this.state.size.col - 1
                 };
                 currentRow.push(currentNode);
             }
@@ -39,13 +44,13 @@ export default class Board extends Component {
                     return (
                      <div key={rowIdx}>
                        {row.map((node, nodeIdx) => {
-                        const {isStart, isFinish}=  node;
+                        const {x, o}=  node;
                                 
                         return (
                          <Node 
                              key={nodeIdx} 
-                             isStart={isStart} 
-                             isFinish={isFinish} 
+                             x={x} 
+                             o={o} 
                              test={'foo'}
                              test={'kappa'}></Node>
                         );}
