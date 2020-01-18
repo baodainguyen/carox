@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/carox/static/css/main.d1b05096.chunk.css",
+    "main.js": "/carox/static/js/main.47f60ea3.chunk.js",
+    "main.js.map": "/carox/static/js/main.47f60ea3.chunk.js.map",
+    "runtime-main.js": "/carox/static/js/runtime-main.1be5d244.js",
+    "runtime-main.js.map": "/carox/static/js/runtime-main.1be5d244.js.map",
+    "static/js/2.6360ac69.chunk.js": "/carox/static/js/2.6360ac69.chunk.js",
+    "static/js/2.6360ac69.chunk.js.map": "/carox/static/js/2.6360ac69.chunk.js.map",
+    "index.html": "/carox/index.html",
+    "precache-manifest.9b634aada6a58b4f7cd900107fdddf2a.js": "/carox/precache-manifest.9b634aada6a58b4f7cd900107fdddf2a.js",
+    "service-worker.js": "/carox/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/carox/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.6360ac69.chunk.js.LICENSE": "/carox/static/js/2.6360ac69.chunk.js.LICENSE",
+    "static/media/logo.svg": "/carox/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1be5d244.js",
+    "static/js/2.6360ac69.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.47f60ea3.chunk.js"
+  ]
+}
