@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/carox/static/css/main.9e039580.chunk.css",
-    "main.js": "/carox/static/js/main.14aa024d.chunk.js",
-    "main.js.map": "/carox/static/js/main.14aa024d.chunk.js.map",
+    "main.css": "/carox/static/css/main.9a9fd492.chunk.css",
+    "main.js": "/carox/static/js/main.2098febc.chunk.js",
+    "main.js.map": "/carox/static/js/main.2098febc.chunk.js.map",
     "runtime-main.js": "/carox/static/js/runtime-main.1be5d244.js",
     "runtime-main.js.map": "/carox/static/js/runtime-main.1be5d244.js.map",
     "static/js/2.e1cc362c.chunk.js": "/carox/static/js/2.e1cc362c.chunk.js",
     "static/js/2.e1cc362c.chunk.js.map": "/carox/static/js/2.e1cc362c.chunk.js.map",
     "index.html": "/carox/index.html",
-    "precache-manifest.67800f437ffeca9463f5b4439e9e809b.js": "/carox/precache-manifest.67800f437ffeca9463f5b4439e9e809b.js",
+    "precache-manifest.26fbe437d0275ece78412a953e4a004e.js": "/carox/precache-manifest.26fbe437d0275ece78412a953e4a004e.js",
     "service-worker.js": "/carox/service-worker.js",
-    "static/css/main.9e039580.chunk.css.map": "/carox/static/css/main.9e039580.chunk.css.map",
+    "static/css/main.9a9fd492.chunk.css.map": "/carox/static/css/main.9a9fd492.chunk.css.map",
     "static/js/2.e1cc362c.chunk.js.LICENSE": "/carox/static/js/2.e1cc362c.chunk.js.LICENSE",
     "static/media/logo.svg": "/carox/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1be5d244.js",
     "static/js/2.e1cc362c.chunk.js",
-    "static/css/main.9e039580.chunk.css",
-    "static/js/main.14aa024d.chunk.js"
+    "static/css/main.9a9fd492.chunk.css",
+    "static/js/main.2098febc.chunk.js"
   ]
 }
