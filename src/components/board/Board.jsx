@@ -10,11 +10,12 @@ export default class Board extends Component {
             nodes: [],
             size: {row: 30, col: 52}
         };
-        this.guess = {
-          block: []
+        this.turn = {
+          xplayer: 0,
+          oplayer: 0,
+          num: 0
         }
     }
-
     
     componentDidMount(){
         const nodes = [];
@@ -24,14 +25,20 @@ export default class Board extends Component {
                 const currentNode = {
                     col, 
                     row,
-                    x: row === 0 && col === 0,
-                    o: row === 0 && col === this.state.size.col - 1
+                    xplayer: false,
+                    oplayer: col === 0 && row === 0,
+                    y: this.state.size.row - row - 1,
+                    x: col
                 };
                 currentRow.push(currentNode);
             }
             nodes.push(currentRow);
         }
         this.setState({nodes});
+    }
+
+    onBoardClick (x, y) {
+      console.log(x, y);
     }
 
     render(){
@@ -44,15 +51,17 @@ export default class Board extends Component {
                     return (
                      <div key={rowIdx}>
                        {row.map((node, nodeIdx) => {
-                        const {x, o}=  node;
+                        const {xplayer, oplayer, x, y} =  node;
                                 
                         return (
                          <Node 
                              key={nodeIdx} 
-                             x={x} 
-                             o={o} 
-                             test={'foo'}
-                             test={'kappa'}></Node>
+                             xplayer={xplayer} 
+                             oplayer={oplayer}
+                             x={x}
+                             y={y} 
+                             onNodeClick={this.onBoardClick}
+                          ></Node>
                         );}
                       )}
                      </div>

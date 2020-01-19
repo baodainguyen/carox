@@ -1,0 +1,25 @@
+.carox-header {
+	height: 50px;
+	display: flex;
+	align-items: stretch;
+}
+
+.carox-header > div {
+	height: 50px;
+	text-align: center;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+	padding-top: 20px;
+}
+
+.flex-grow-1 > .player {
+	margin: 5px 10px;
+	vertical-align: middle;
+	display: inline-flex;
+}
+
+.flex-grow-8 {
+	flex-grow: 8;
+}

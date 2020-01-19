@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './Carox.css';
 import Board from './components/board/Board'
+import Header from './components/Header'
 
 function Carox() {
   return (
     <div className="Carox">
-      <img src={logo} className="Carox-logo" alt="logo"/>
+      <Header />
       <Board />
     </div>
   );

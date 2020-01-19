@@ -4,14 +4,27 @@ import './Node.css';
 export default class Node extends Component {
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            eClassName: ""
+        };
+    }
+
+    onNodeClick = () => {
+        const {x, y} = this.props;
+        this.setState({eClassName: "node-x"});
+        this.props.onNodeClick(x, y);
     }
     
     render(){
-        const {x, o} = this.props;
-        const extraClassName = x ? 'node-x' : o ? 'node-o' : '';
+        const {xplayer, oplayer} = this.props;
+        const extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
         
-        return <div className={`node ${extraClassName}`}></div>;
+        return  <div 
+                    className={`node ${extraClassName} ${this.state.eClassName}`}
+                    onClick={() => this.onNodeClick()}
+                >
+                    <img alt="" />
+                </div>;
     }
 }
 
