@@ -1,3 +1,12 @@
 .grid {
     margin-top: 20px;
 }
+
+#main-caro {
+	overflow: scroll;
+}
+
+#main-caro > .grid {
+    min-width: 1313px;
+    min-height: 750px;
+}

@@ -9,22 +9,30 @@ export default class Node extends Component {
         };
     }
 
-    onNodeClick = () => {
+    onNodeClick = (extraClassName) => {
+        const {clickClass} = this.state;
+        if(extraClassName === 'node-o' || clickClass === 'node-x') {
+            return;
+        }
+
         const {x, y} = this.props;
         this.setState({clickClass: "node-x"});
         this.props.onNodeClick(x, y);
     }
     
     render(){
-        const {xplayer, oplayer, classSize} = this.props;
-        var extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
+        const {xplayer, oplayer, size} = this.props;
+        let extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
+        let classSize = 'node-' + (size ? size : '25');
         
-        return  <div 
-                    className={`node ${classSize} ${extraClassName} ${this.state.clickClass}`}
-                    onClick={() => this.onNodeClick()}
-                >
-                    <img alt="" />
-                </div>;
+        return (
+            <div 
+                className={`node ${classSize} ${extraClassName} ${this.state.clickClass}`}
+                onClick={() => this.onNodeClick(extraClassName)}
+            >
+                <img alt="" />
+            </div>
+        );
     }
 }
 

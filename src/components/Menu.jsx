@@ -4,10 +4,7 @@ import {gameScreen} from '../global'
 import './Menu.css';
 
 export default class Menu extends Component {
-	constructor(props){
-		super(props);
-	}
-
+	
 	render(){
 
 		return (
