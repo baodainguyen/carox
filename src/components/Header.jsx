@@ -12,13 +12,13 @@ export default class Header extends Component {
 		return <div className="carox-header">
 				 <div className="flex-grow-1"> 
 				 	<h5 className="player">Player 1</h5>
-				 	<Node xplayer={true}/> 
+				 	<Node xplayer={true} classSize={'node-25'}/> 
 				 </div>
 				 <div className="flex-grow-8">
 				 	<img src={logo} className="Carox-logo" alt="logo"/>
 				 </div>
 				 <div className="flex-grow-1"> 
-				 	<Node oplayer={true}/> 
+				 	<Node oplayer={true} classSize={'node-25'}/> 
 				 	<h5 className="player">Player 2</h5>
 				 </div>
 			   </div>
