@@ -2,11 +2,13 @@
     margin-top: 20px;
 }
 
-#main-caro {
-	overflow: scroll;
-}
-
 #main-caro > .grid {
     min-width: 1313px;
     min-height: 750px;
+}
+
+@media only screen and (max-width: 1312px) {
+  #main-caro {
+	overflow: scroll;
+  }
 }
