@@ -7,8 +7,7 @@ export default class Board extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nodes: [],
-            size: {row: 30, col: 52}
+            nodes: []
         };
         this.turn = {
           xplayer: 0,
@@ -19,15 +18,15 @@ export default class Board extends Component {
     
     componentDidMount(){
         const nodes = [];
-        for(let row = 0; row < this.state.size.row; row++){
+        for(let row = 0; row < this.props.board.size.row; row++){
             const currentRow = [];
-            for(let col = 0; col < this.state.size.col; col++){
+            for(let col = 0; col < this.props.board.size.col; col++){
                 const currentNode = {
                     col, 
                     row,
                     xplayer: false,
                     oplayer: col === 0 && row === 0,
-                    y: this.state.size.row - row - 1,
+                    y: this.props.board.size.row - row - 1,
                     x: col
                 };
                 currentRow.push(currentNode);
@@ -42,7 +41,8 @@ export default class Board extends Component {
     }
 
     render(){
-        const {nodes} = this.state;
+        const {nodes} = this.state,
+              {size} = this.props.board;
         
         
         return (
@@ -59,9 +59,10 @@ export default class Board extends Component {
                              xplayer={xplayer} 
                              oplayer={oplayer}
                              x={x}
-                             y={y} 
+                             y={y}
+                             classSize={size.row < 5 && size.col < 5 ? 'node-100' : (size.row < 10 && size.col < 10 ? 'node-50' : 'node-25')} 
                              onNodeClick={this.onBoardClick}
-                          ></Node>
+                          />
                         );}
                       )}
                      </div>

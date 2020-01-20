@@ -5,22 +5,22 @@ export default class Node extends Component {
     constructor(props){
         super(props);
         this.state = {
-            eClassName: ""
+            clickClass: ""
         };
     }
 
     onNodeClick = () => {
         const {x, y} = this.props;
-        this.setState({eClassName: "node-x"});
+        this.setState({clickClass: "node-x"});
         this.props.onNodeClick(x, y);
     }
     
     render(){
-        const {xplayer, oplayer} = this.props;
-        const extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
+        const {xplayer, oplayer, classSize} = this.props;
+        var extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
         
         return  <div 
-                    className={`node ${extraClassName} ${this.state.eClassName}`}
+                    className={`node ${classSize} ${extraClassName} ${this.state.clickClass}`}
                     onClick={() => this.onNodeClick()}
                 >
                     <img alt="" />

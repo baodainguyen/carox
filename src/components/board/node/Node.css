@@ -1,8 +1,21 @@
 .node {
-    width: 25px;
-    height: 25px;
     outline: 1px solid #e6e6e6;
     display: inline-block;
+}
+
+.node-25 {
+    width: 25px;
+    height: 25px;
+}
+
+.node-50 {
+	width: 50px;
+    height: 50px;
+}
+
+.node-100 {
+	width: 100px;
+    height: 100px;
 }
 
 .node-x {
