@@ -64,13 +64,7 @@ export default class Board extends Component {
 
     onBoardClick (x, y) {
       var _aNodes = [];
-      function setAttr(dx, dy, minScore){
-        let node0 = $('#'+ dx + '-' + dy),
-        min0 = parseInt(node0.attr('min'));
-        min0 += minScore;
-        
-        setNodeAttr(node0, min0.toString())
-      };
+      
       function setNodeAttr(node, min){
         node.attr("min", min.toString());
         node.children('span').text(min.toString());
