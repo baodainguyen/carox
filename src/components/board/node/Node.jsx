@@ -21,16 +21,18 @@ export default class Node extends Component {
     }
     
     render(){
-        const {xplayer, oplayer, size} = this.props;
+        const {xplayer, oplayer, size, x, y} = this.props;
         let extraClassName = xplayer ? 'node-x' : oplayer ? 'node-o' : '';
         let classSize = 'node-' + (size ? size : '25');
         
         return (
-            <div 
+            <div
+                id={`${x}-${y}`} 
+                min="0"
                 className={`node ${classSize} ${extraClassName} ${this.state.clickClass}`}
                 onClick={() => this.onNodeClick(extraClassName)}
             >
-                <img alt="" />
+                <span></span>
             </div>
         );
     }

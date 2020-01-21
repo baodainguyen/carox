@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {gameScreen} from '../global'
+import {gameScreen} from './global'
 import Menu from './Menu'
 import './Menu.css';
 import Board from './board/Board'

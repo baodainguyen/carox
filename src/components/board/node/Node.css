@@ -25,3 +25,8 @@
 .node-o {
     background-color: green;
 }
+
+.node > span {
+    font-size: 9px;
+    display: table;
+}
