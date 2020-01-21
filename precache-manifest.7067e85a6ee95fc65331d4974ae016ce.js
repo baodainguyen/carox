@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e335bf23323e972c5943251f53d7be2b",
+    "revision": "2dd91f951617ac13df71a7b61ae124e9",
     "url": "/carox/index.html"
   },
   {
-    "revision": "97baafdad7af1587d2a1",
-    "url": "/carox/static/css/main.8a0beaaf.chunk.css"
+    "revision": "8ae7137b0b40569bfc4f",
+    "url": "/carox/static/css/main.6bf5d6c1.chunk.css"
   },
   {
-    "revision": "b70490f2d1d005dcbf77",
-    "url": "/carox/static/js/2.5a9b8ffd.chunk.js"
+    "revision": "2f0413b3e7ab2307ab2d",
+    "url": "/carox/static/js/2.54370830.chunk.js"
   },
   {
     "revision": "8de4bdbb127f280cc6b79279dd69f244",
-    "url": "/carox/static/js/2.5a9b8ffd.chunk.js.LICENSE"
+    "url": "/carox/static/js/2.54370830.chunk.js.LICENSE"
   },
   {
-    "revision": "97baafdad7af1587d2a1",
-    "url": "/carox/static/js/main.0368c195.chunk.js"
+    "revision": "8ae7137b0b40569bfc4f",
+    "url": "/carox/static/js/main.47f0e9c7.chunk.js"
   },
   {
     "revision": "10755e6d01a3a1236a3b",
