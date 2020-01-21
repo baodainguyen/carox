@@ -63,62 +63,88 @@ export default class Board extends Component {
     }
 
     onBoardClick (x, y) {
-      var _x = x-1, _y = y-1,
-          $node = $('#'+ _x + '-' + _y),
-          min = parseInt($node.attr('min'));
-      
-      console.log(this.state, min);
-      
-      // if(minScore[mScoreKey] === 0) {
-          
-      //     minScore[mScoreKey] = -1;
-
-      //   } else {
-      //     let _minScore = minScore[mScoreKey];
-      //     _minScore += -1;
-
-      //       minScore[mScoreKey] = _minScore;
-      //   }
-
-      if($node.hasClass('node-x')) {
-          //$('#'+ (x-2) + '-' + (y-2) + ' span').text('-100');
-
+      var _aNodes = [];
+      function setAttr(dx, dy, minScore){
+        let node0 = $('#'+ dx + '-' + dy),
+        min0 = parseInt(node0.attr('min'));
+        min0 += minScore;
+        
+        setNodeAttr(node0, min0.toString())
+      };
+      function setNodeAttr(node, min){
+        node.attr("min", min.toString());
+        node.children('span').text(min.toString());
+      };
+      function setNodeMore(x, y, dX, dY, minScore){
+        let _node = $('#'+ x + '-' + y),
+            min = minScore;
+        if(_node.hasClass('node-x')) {
+          min = setNodeMore(x + dX, y + dY, dX, dY, minScore * 10);
         } else {
-          let $child = $node.children('span');
-          switch(min){
-            case -1:
-
-            break;
-            default:
-
-            break;
-          }
-          if(min === 0) {
-            min = -1;
-            $child.text(min.toString());
-          } else {
-
-          }
-          //$child.text(minScore[mScoreKey]);
+          setNodeAttr(_node, minScore);
         }
-        
-        $('#'+ (x-1) + '-' + (y-1) + ' span').text('-1');
-        
-        $('#'+ (x) + '-' + (y-1) + ' span').text('-1');
-        
-        $('#'+ (x+1) + '-' + (y-1) + ' span').text('-1');
+        return min;
+      }
 
-        $('#'+ (x-1) + '-' + (y) + ' span').text('-1');
-        
-        $('#'+ (x+1) + '-' + (y) + ' span').text('-1');
+      function setMinInNode(_x, _y){
+        let node0 = $('#'+ _x + '-' + _y);
 
-        $('#'+ (x-1) + '-' + (y+1) + ' span').text('-1');
-        
-        $('#'+ (x) + '-' + (y+1) + ' span').text('-1');
-        
-        $('#'+ (x+1) + '-' + (y+1) + ' span').text('-1');
+        if(node0.hasClass('node-x')) {
+           let deltaX = _x - x,
+              deltaY = _y - y;
 
-      console.log(x, y);
+           let _min = setNodeMore(_x + deltaX, _y + deltaY, deltaX, deltaY, -100);
+           
+           if(deltaX === 0 && deltaY === 0) {
+            
+           } else {
+            let _node = $('#'+ (x - deltaX) + '-' + (y - deltaY));
+            _aNodes.push({x: x - deltaX, y: y - deltaY, min: _min});
+
+            setNodeAttr(_node, _min + parseInt(_node.attr('min')));
+           }
+        } else {
+          let min = parseInt(node0.attr('min'));
+          if(_aNodes.length < 1) {
+            min += -1;
+          } else {
+            _aNodes.forEach(function(e){
+              if(_x === e.x && _y === e.y) {
+                
+              } else {
+                min += -1;
+              }
+            });
+          }
+          
+          setNodeAttr(node0, min.toString());
+        }
+      }
+
+      var _x = x - 1, _y = y - 1;
+      setMinInNode(_x, _y);
+
+      _x = x; _y = y - 1;
+      setMinInNode(_x, _y);
+      
+      _x = x + 1; _y = y - 1;
+      setMinInNode(_x, _y);
+
+      _x = x - 1; _y = y;
+      setMinInNode(_x, _y);
+
+      _x = x + 1; _y = y;
+      setMinInNode(_x, _y);
+
+      _x = x - 1; _y = y + 1;
+      setMinInNode(_x, _y);
+
+      _x = x; _y = y + 1;
+      setMinInNode(_x, _y);
+
+      _x = x + 1; _y = y + 1;
+      setMinInNode(_x, _y);
+        
     }
 
     render(){
