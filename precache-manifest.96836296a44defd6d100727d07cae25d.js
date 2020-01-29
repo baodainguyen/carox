@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b96d3e2df4c1c7f9ff3b5c5b02b7fbc",
+    "revision": "46aa9375d4cbe721f7c409be11b1e8db",
     "url": "/carox/index.html"
   },
   {
-    "revision": "cf270e87febe5e1ca99d",
+    "revision": "19b05577ac178586552b",
     "url": "/carox/static/css/main.6bf5d6c1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carox/static/js/2.5a9b8ffd.chunk.js.LICENSE"
   },
   {
-    "revision": "cf270e87febe5e1ca99d",
-    "url": "/carox/static/js/main.51c16284.chunk.js"
+    "revision": "19b05577ac178586552b",
+    "url": "/carox/static/js/main.91734f0b.chunk.js"
   },
   {
     "revision": "10755e6d01a3a1236a3b",
